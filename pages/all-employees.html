@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--      Bootstrap     -->
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-utilities.min.css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="../resources/css/style.css"/>
+
+    <!--Bootstrap JS-->
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../resources/js/site.js"></script>
+    <title>All Employees</title>
+</head>
+<body>
+<!--Header Section-->
+<header>
+    <div class="menu__bar" id="navBar">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+        <div class="line-three"></div>
+    </div>
+    <div class="header__profile--container">
+        <div class="dropdown header__business--profile">
+            <button class="dropdown-toggle" type="button" id="headerdropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <div class="navbar__left--info">
+                    <p class="header__profile">Business Profiles</p>
+                    <ul class="nav__profile--ul">
+                        <li>Cracker Jack Hospitality</li>
+                    </ul>
+                </div>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="headerdropdown">
+                <li><a class="dropdown-item li__one" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Account Profile</span>
+                </a></li>
+                <li><a class="dropdown-item li__two" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Own Profile</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="header__right--container">
+            <div class="chat__notification">
+                <a href="./chat.html">
+                    <svg width="24" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3333 5.8196V13.3363C17.3333 14.2529 16.5833 15.0029 15.6666 15.0029H3.99996L0.666626 18.3363V3.33626C0.666626 2.4196 1.41663 1.6696 2.33329 1.6696H10.75C10.7 1.93626 10.6666 2.2196 10.6666 2.50293C10.6666 4.80293 12.5333 6.6696 14.8333 6.6696C15.775 6.6696 16.6333 6.3446 17.3333 5.8196ZM12.3333 2.50293C12.3333 3.88626 13.45 5.00293 14.8333 5.00293C16.2166 5.00293 17.3333 3.88626 17.3333 2.50293C17.3333 1.1196 16.2166 0.00292969 14.8333 0.00292969C13.45 0.00292969 12.3333 1.1196 12.3333 2.50293Z" fill="#F16532"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__profile--details" id="profile">
+                <img src="../resources/images/profile.png" alt="profile"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+        </div>
+        <ul class="profile__menu--container menu__show" id="profileMenu">
+            <li>
+                <h2>Good Morning, Krishna</h2>
+                <p>Prject Admin</p>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <a href="./account-settings.html">Account Settings</a>
+            </li>
+            <li class="log__out--menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span><a href="../index.html">Log Out</a></span>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <!--Left Menu-->
+    <div class="left__menu--container navmenu__show" id="leftMenu">
+        <img src="../resources/images/logo/logo.png" alt="logo"/>
+        <ul class="left__menu--items">
+            <li class="each__menu--item">
+                <a href="./dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Dashboard
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="./payroll-entries.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Payroll Entries
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a class="sidebar__active" href="all-employees.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Employees
+                </a>
+            </li>
+            <li class="each__menu--item dropdown__menu" id="dropdown">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Job Listings
+                </a>
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M1 1L6.29289 6.29289C6.68342 6.68342 7.31658 6.68342 7.70711 6.29289L13 1"
+                            stroke="#7D7D7E"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                    />
+                </svg>
+            </li>
+            <li class="dropdown__menu--items menu__show position-relative" id="dropdownMenu">
+                <div class="position-absolute left__border--line"></div>
+                <ul>
+                    <li class="dropdown__menu--item">
+                        <span><a href="./job-active.html">Active</a></span>
+                    </li>
+                    <li class="dropdown__menu--item">
+                        <span><a href="#">Draft</a></span>
+                    </li>
+                    </li>
+                    <li class="dropdown__menu--item">
+                        <span><a href="#">Archived</a></span>
+                    </li>
+                </ul>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                    Event Register
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    Performance Management
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    Jobs Board
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content-container">
+    <div class="container-layout">
+        <div class="breadcums">
+            <h3>Employees&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<span class="employee_breadcrumb">All Employees</span>
+            </h3>
+        </div>
+
+
+        <!--            Page Content            -->
+
+        <div class="payroll__tab--container">
+            <h2>CrackerJack Hospitality</h2>
+
+            <!--Tab pills-->
+
+            <nav id="payroll-nav">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="all-employee-tab" data-bs-toggle="tab"
+                            data-bs-target="#all-payroll" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        All Employees
+                    </button>
+                    <button class="nav-link" id="visa-tab" data-bs-toggle="tab" data-bs-target="#pending-payroll"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        Visa Status
+                    </button>
+                    <button class="nav-link" id="uploded-tab" data-bs-toggle="tab" data-bs-target="#uploaded-payroll"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>-->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                        Licence Status
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!--Search Action-->
+
+        <div class="payroll__search--container">
+            <div class="row m-0">
+                <div class="col-lg-8 col-md-12 col-12 px-4">
+                    <div class="row m-0">
+                        <div class="col-lg-12 col-md-12 col-10 p-0">
+                            <div class="payroll__search">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.33326 7.33326H7.8066L7.61993 7.15326C8.41993 6.21993 8.83326 4.9466 8.6066 3.59326C8.29326 1.73993 6.7466 0.259929 4.87993 0.0332621C2.05993 -0.313405 -0.313405 2.05993 0.0332621 4.87993C0.259929 6.74659 1.73993 8.29326 3.59326 8.6066C4.9466 8.83326 6.21993 8.41993 7.15326 7.61993L7.33326 7.80659V8.33326L10.1666 11.1666C10.4399 11.4399 10.8866 11.4399 11.1599 11.1666C11.4333 10.8933 11.4333 10.4466 11.1599 10.1733L8.33326 7.33326ZM4.33326 7.33326C2.67326 7.33326 1.33326 5.99326 1.33326 4.33326C1.33326 2.67326 2.67326 1.33326 4.33326 1.33326C5.99326 1.33326 7.33326 2.67326 7.33326 4.33326C7.33326 5.99326 5.99326 7.33326 4.33326 7.33326Z"
+                                          fill="#616161"/>
+                                </svg>
+                                <input type="text" name="search" id="payroll-search" placeholder="Search...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12 mt-lg-0 mt-sm-4 p-0">
+                    <div class="row payroll__filter--container m-0 justify-content-end">
+                        <div class="col-lg-3 col-md-4 col-4 ps-0">
+                            <button class="btn__jobs">Jobs</button>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-4 ps-0">
+                            <div class="btn__sync">Filter</div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-4 ps-0 p-0">
+                            <button class="btn__sync">
+                                <svg class="mg-r" width="16" height="24" viewBox="0 0 16 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.249934 1.61C2.56993 4.59 5.99993 9 5.99993 9V14C5.99993 15.1 6.89993 16 7.99993 16C9.09993 16 9.99993 15.1 9.99993 14V9C9.99993 9 13.4299 4.59 15.7499 1.61C16.2599 0.95 15.7899 0 14.9499 0H1.03993C0.209934 0 -0.260066 0.95 0.249934 1.61Z"
+                                          fill="#F16532"/>
+                                </svg>
+                                Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payroll__table--container">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="all-payroll" role="tabpanel"
+                     aria-labelledby="all-employee-tab">
+                    <h3 class="table__heading">All Employees</h3>
+                    <table class="table table-borderless employee__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+
+                            </th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Team</th>
+                            <th scope="col">Employment Type</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Uploaded documents</th>
+                            <th scope="col">Verification Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Louie McGee</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file">100<span>%</span> </label>
+                                    <progress id="file" value="100" max="100"> 100%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__complete">
+                                    Completed
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Kadin Press</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Roger Vetrovs</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file2">56<span>%</span> </label>
+                                    <progress id="file2" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Miracle Gouse</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Mira Lipshutz</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Kadin Workman</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Omar Siphron</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Miracle Carder</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Aspen Rhiel Madsen</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Marley Vetrovs</td>
+                            <td>Barista</td>
+                            <td>Ground Level</td>
+                            <td>Full-time</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <div class="progress__bar--container">
+                                    <label for="file1">56<span>%</span> </label>
+                                    <progress id="file1" value="56" max="100"> 56%</progress>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="validation__pending">
+                                    Pending
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn" data-bs-toggle="modal" data-bs-target="#write-note">
+                                    <svg width="24" height="24" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.3333 2.16667V9.66667H9.16667V13.8333H1.66667V2.16667H13.3333ZM13.3333 0.5H1.66667C0.75 0.5 0 1.25 0 2.16667V13.8333C0 14.75 0.75 15.5 1.66667 15.5H10L15 10.5V2.16667C15 1.25 14.25 0.5 13.3333 0.5ZM7.5 9.66667H3.33333V8H7.5V9.66667ZM11.6667 6.33333H3.33333V4.66667H11.6667V6.33333Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pending-payroll" role="tabpanel" aria-labelledby="visa-tab">
+                    <h3 class="table__heading">Visa Status</h3>
+                    <table class="table table-borderless payroll__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+
+                            </th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Occupation</th>
+                            <th scope="col">Sync Type</th>
+                            <th scope="col">Sync Status</th>
+                            <th scope="col">Payroll Entry Status</th>
+                            <th scope="col">Payroll Entry Date</th>
+                            <th scope="col">Details Changed</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Talan</td>
+                            <td>Saris</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn sync__payroll">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    <div class="payroll__sync--container">
+                                        <ul>
+                                            <li>Sync with Payroll</li>
+                                            <li>Remove</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Maren</td>
+                            <td>George</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Makenna</td>
+                            <td>Saris</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Phillip</td>
+                            <td>Levin</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn sync__payroll">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    <div class="payroll__sync--container">
+                                        <ul>
+                                            <li>Sync with Payroll</li>
+                                            <li>Remove</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Gretchen</td>
+                            <td>Schleifer</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Wilson</td>
+                            <td>Aminoff</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Erin</td>
+                            <td>Korsgaard</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn recent__invitation">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    <div class="invitation__recent--container">
+                                        <ul>
+                                            <li>Resent invitation</li>
+                                            <li>Remove</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Emerson</td>
+                            <td>Passaquindici</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Phillip</td>
+                            <td>Rosser</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+                                        <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                                  fill="#F16532"/>
+                                        </svg>
+                                    </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Emerson</td>
+                            <td>Rhiel Madsen</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg width="24" height="24" viewBox="0 0 18 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6667 0.666504H2.33341C1.41675 0.666504 0.666748 1.4165 0.666748 2.33317V17.3332L4.00008 13.9998H15.6667C16.5834 13.9998 17.3334 13.2498 17.3334 12.3332V2.33317C17.3334 1.4165 16.5834 0.666504 15.6667 0.666504ZM15.6667 12.3332H4.00008L2.33341 13.9998V2.33317H15.6667V12.3332Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </span>
+                                <span class="action__btn">
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day" id="rowNumber">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="uploaded-payroll" role="tabpanel" aria-labelledby="uploded-tab">
+                    <h3 class="table__heading">List</h3>
+                    <table class="table table-borderless payroll__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+
+                            </th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Occupation</th>
+                            <th scope="col">Sync Type</th>
+                            <th scope="col">Sync Status</th>
+                            <th scope="col">Payroll Entry Status</th>
+                            <th scope="col">Payroll Entry Date</th>
+                            <th scope="col">Details Changed</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Talan</td>
+                            <td>Saris</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                <span class="action__btn mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Maren</td>
+                            <td>George</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Makenna</td>
+                            <td>Saris</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Phillip</td>
+                            <td>Levin</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Gretchen</td>
+                            <td>Schleifer</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Wilson</td>
+                            <td>Aminoff</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Erin</td>
+                            <td>Korsgaard</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Uploaded</td>
+                            <td>Uploaded</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Emerson</td>
+                            <td>Passaquindici</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Phillip</td>
+                            <td>Rosser</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">&nbsp;
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Emerson</td>
+                            <td>Rhiel Madsen</td>
+                            <td>crackerjack@gmail.com</td>
+                            <td>Barista</td>
+                            <td>KeyPay</td>
+                            <td>Pending</td>
+                            <td>Pending</td>
+                            <td>15/02/2021</td>
+                            <td>
+                                <spsn class="detail__edited" data-toggle="tooltip" data-placement="top"
+                                      title="Detail has been edited">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.1875 0C2.4275 0 0.1875 2.24 0.1875 5C0.1875 7.76 2.4275 10 5.1875 10C7.9475 10 10.1875 7.76 10.1875 5C10.1875 2.24 7.9475 0 5.1875 0ZM5.1875 5.5C4.9125 5.5 4.6875 5.275 4.6875 5V3C4.6875 2.725 4.9125 2.5 5.1875 2.5C5.4625 2.5 5.6875 2.725 5.6875 3V5C5.6875 5.275 5.4625 5.5 5.1875 5.5ZM5.6875 7.5H4.6875V6.5H5.6875V7.5Z"
+                                              fill="#FFAB91"/>
+                                    </svg>
+                                </spsn>
+                            </td>
+                            <td class="d-flex">
+                                    <span class="action__btn mx-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                    </span>
+                                <span class="action__btn">
+<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day" id="rowNumber">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Start-->
+
+    <!-- Modal -->
+    <div class="modal fade write__model" id="write-note" data-bs-keyboard="true"
+         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body m-0 p-0">
+                    <div class="write__note--container">
+                        <h3>Write a note</h3>
+                        <div class="each__detail--input">
+                            <input class='textarea' name='UserId' placeholder="Uniform"/>
+                            <br>
+                            <label for='userId' class='label'>Subject</label>
+                        </div>
+                        <div class="each__detail--input">
+                            <select class="textarea">
+                                <option value="0" selected disabled>Uniform</option>
+                            </select>
+                            <label for='userId' class='select__label'>Tags</label>
+                        </div>
+                        <div class="text__area-note">
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="account__action--container justify-content-start">
+                        <button class="cancel__btn" data-bs-dismiss="modal">Cancel</button>
+                        <button class="save__btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal End-->
+
+
+    <!--            Footer          -->
+
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__menu--container">
+                <ul class="d-flex align-items-center">
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="copyright__container">
+                    <p id="year">
+                        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+                        ©SaucedIt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

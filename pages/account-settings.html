@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap"
+            rel="stylesheet"
+    />
+    <!--      Bootstrap     -->
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-utilities.min.css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="../resources/css/style.css"/>
+
+    <!--Bootstrap JS-->
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../resources/js/password-strength.js"></script>
+    <script src="../resources/js/site.js" defer></script>
+    <script src="../resources/js/password.js"></script>
+    <title>Account Settings</title>
+</head>
+<body>
+<!--Header Section-->
+<header>
+    <div class="menu__bar" id="navBar">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+        <div class="line-three"></div>
+    </div>
+    <div class="header__profile--container">
+        <div class="dropdown header__business--profile">
+            <button class="dropdown-toggle" type="button" id="headerdropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <div class="navbar__left--info">
+                    <p class="header__profile">Business Profiles</p>
+                    <ul class="nav__profile--ul">
+                        <li>Cracker Jack Hospitality</li>
+                    </ul>
+                </div>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="headerdropdown">
+                <li><a class="dropdown-item li__one" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Account Profile</span>
+                </a></li>
+                <li><a class="dropdown-item li__two" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Own Profile</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="header__right--container">
+            <div class="chat__notification">
+                <a href="./chat.html">
+                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3333 5.8196V13.3363C17.3333 14.2529 16.5833 15.0029 15.6666 15.0029H3.99996L0.666626 18.3363V3.33626C0.666626 2.4196 1.41663 1.6696 2.33329 1.6696H10.75C10.7 1.93626 10.6666 2.2196 10.6666 2.50293C10.6666 4.80293 12.5333 6.6696 14.8333 6.6696C15.775 6.6696 16.6333 6.3446 17.3333 5.8196ZM12.3333 2.50293C12.3333 3.88626 13.45 5.00293 14.8333 5.00293C16.2166 5.00293 17.3333 3.88626 17.3333 2.50293C17.3333 1.1196 16.2166 0.00292969 14.8333 0.00292969C13.45 0.00292969 12.3333 1.1196 12.3333 2.50293Z" fill="#F16532"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__profile--details" id="profile">
+                <img src="../resources/images/profile.png" alt="profile"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+        </div>
+        <ul class="profile__menu--container menu__show" id="profileMenu">
+            <li>
+                <h2>Good Morning, Krishna</h2>
+                <p>Prject Admin</p>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <a href="./account-settings.html">Account Settings</a>
+            </li>
+            <li class="log__out--menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span><a href="../index.html">Log Out</a></span>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <!--Left Menu-->
+    <div class="left__menu--container navmenu__show" id="leftMenu">
+        <img src="../resources/images/logo/logo.png" alt="logo"/>
+        <ul class="left__menu--items">
+            <li class="each__menu--item">
+                <a href="./dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Dashboard
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="./payroll-entries.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Payroll Entries
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="all-employees.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Employees
+                </a>
+            </li>
+            <li class="each__menu--item dropdown__menu" id="dropdown">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Job Listings
+                </a>
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M1 1L6.29289 6.29289C6.68342 6.68342 7.31658 6.68342 7.70711 6.29289L13 1"
+                            stroke="#7D7D7E"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                    />
+                </svg>
+            </li>
+            <li class="dropdown__menu--items menu__show position-relative" id="dropdownMenu">
+                <div class="position-absolute left__border--line"></div>
+                <ul>
+                    <li class="dropdown__menu--item">
+                        <span><a href="./job-active.html">Active</a></span>
+                    </li>
+                    <li class="dropdown__menu--item">
+                        <span><a href="#">Draft</a></span>
+                    </li>
+                    </li>
+                    <li class="dropdown__menu--item">
+                        <span><a href="#">Archived</a></span>
+                    </li>
+                </ul>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                    Event Register
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    Performance Management
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    Jobs Board
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="container-layout">
+        <div class="breadcums">
+            <h3>Account Settings</h3>
+        </div>
+
+
+        <!--            Page Content            -->
+
+        <div class="account__setting--container">
+            <h4 class="account__heading">Account Setting</h4>
+            <div class="account__card--details">
+                <div class="row m-0">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-12 pe-0">
+                        <div class="account__left--menu">
+                            <div class="nav nav-pills flex-column" id="leftNav" role="tablist" aria-orientation="vertical">
+                                <li class="nav-link active" id="details" data-bs-toggle="pill" data-bs-target="#details-tab" role="tab">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    My Details
+                                </li>
+                                <li class="nav-link" id="password" data-bs-toggle="pill" data-bs-target="#password-tab" role="tab">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    Change Password
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-12 p-0">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="details-tab" role="tabpanel" aria-labelledby="details">
+                                <div class="account__right--tab">
+                                    <div class="account__right--top">
+                                        <img src="../resources/images/account-image.png" alt="account image">
+                                        <div class="right__top--container">
+                                            <button class="right__top--details">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.6666 8.6666C12.4898 8.6666 12.3202 8.73683 12.1952 8.86186C12.0702 8.98688 11.9999 9.15645 11.9999 9.33326V9.5866L11.0133 8.59993C10.6649 8.25429 10.194 8.06035 9.70325 8.06035C9.2125 8.06035 8.74164 8.25429 8.39325 8.59993L7.92659 9.0666L6.27325 7.41326C5.92 7.077 5.45096 6.88945 4.96325 6.88945C4.47554 6.88945 4.00651 7.077 3.65325 7.41326L2.66659 8.39993V4.6666C2.66659 4.48979 2.73682 4.32022 2.86185 4.19519C2.98687 4.07017 3.15644 3.99993 3.33325 3.99993H7.99992C8.17673 3.99993 8.3463 3.92969 8.47132 3.80467C8.59635 3.67964 8.66659 3.51008 8.66659 3.33326C8.66659 3.15645 8.59635 2.98688 8.47132 2.86186C8.3463 2.73684 8.17673 2.6666 7.99992 2.6666H3.33325C2.80282 2.6666 2.29411 2.87731 1.91904 3.25238C1.54397 3.62746 1.33325 4.13616 1.33325 4.6666V12.6666C1.33325 13.197 1.54397 13.7057 1.91904 14.0808C2.29411 14.4559 2.80282 14.6666 3.33325 14.6666H11.3333C11.8637 14.6666 12.3724 14.4559 12.7475 14.0808C13.1225 13.7057 13.3333 13.197 13.3333 12.6666V9.33326C13.3333 9.15645 13.263 8.98688 13.138 8.86186C13.013 8.73683 12.8434 8.6666 12.6666 8.6666ZM3.33325 13.3333C3.15644 13.3333 2.98687 13.263 2.86185 13.138C2.73682 13.013 2.66659 12.8434 2.66659 12.6666V10.2866L4.59992 8.35326C4.69786 8.25993 4.82796 8.20787 4.96325 8.20787C5.09854 8.20787 5.22864 8.25993 5.32659 8.35326L7.43992 10.4666L10.3066 13.3333H3.33325ZM11.9999 12.6666C11.999 12.7942 11.9569 12.9181 11.8799 13.0199L8.87325 9.99993L9.33992 9.53326C9.38771 9.48448 9.44476 9.44573 9.50772 9.41927C9.57069 9.39282 9.63829 9.37919 9.70659 9.37919C9.77488 9.37919 9.84249 9.39282 9.90545 9.41927C9.96841 9.44573 10.0255 9.48448 10.0733 9.53326L11.9999 11.4733V12.6666ZM15.1399 2.85993L13.1399 0.859931C13.0765 0.799237 13.0018 0.75166 12.9199 0.719931C12.7576 0.653252 12.5756 0.653252 12.4133 0.719931C12.3314 0.75166 12.2567 0.799237 12.1933 0.859931L10.1933 2.85993C10.1311 2.92209 10.0818 2.99588 10.0481 3.0771C10.0145 3.15831 9.99719 3.24536 9.99719 3.33326C9.99719 3.5108 10.0677 3.68106 10.1933 3.8066C10.3188 3.93213 10.4891 4.00266 10.6666 4.00266C10.8441 4.00266 11.0144 3.93213 11.1399 3.8066L11.9999 2.93993V6.6666C11.9999 6.84341 12.0702 7.01298 12.1952 7.138C12.3202 7.26303 12.4898 7.33326 12.6666 7.33326C12.8434 7.33326 13.013 7.26303 13.138 7.138C13.263 7.01298 13.3333 6.84341 13.3333 6.6666V2.93993L14.1933 3.8066C14.2552 3.86908 14.329 3.91868 14.4102 3.95252C14.4914 3.98637 14.5786 4.0038 14.6666 4.0038C14.7546 4.0038 14.8417 3.98637 14.923 3.95252C15.0042 3.91868 15.0779 3.86908 15.1399 3.8066C15.2024 3.74462 15.252 3.67089 15.2858 3.58965C15.3197 3.50841 15.3371 3.42127 15.3371 3.33326C15.3371 3.24526 15.3197 3.15812 15.2858 3.07688C15.252 2.99564 15.2024 2.92191 15.1399 2.85993Z" fill="#101623"/>
+                                                </svg>
+                                                <span class="mx-2">Upload Profile</span>
+                                            </button>
+                                            <p class="size__limit">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 5.5C5.86739 5.5 5.74022 5.55268 5.64645 5.64645C5.55268 5.74021 5.5 5.86739 5.5 6V8C5.5 8.13261 5.55268 8.25979 5.64645 8.35355C5.74022 8.44732 5.86739 8.5 6 8.5C6.13261 8.5 6.25979 8.44732 6.35356 8.35355C6.44732 8.25979 6.5 8.13261 6.5 8V6C6.5 5.86739 6.44732 5.74021 6.35356 5.64645C6.25979 5.55268 6.13261 5.5 6 5.5ZM6.19 3.54C6.06827 3.48999 5.93173 3.48999 5.81 3.54C5.74863 3.5638 5.69255 3.59948 5.645 3.645C5.60084 3.6936 5.56532 3.74941 5.54 3.81C5.51201 3.86934 5.49831 3.93441 5.5 4C5.49962 4.0658 5.51223 4.13103 5.53712 4.19195C5.562 4.25287 5.59866 4.30828 5.645 4.355C5.6936 4.39917 5.74941 4.43468 5.81 4.46C5.88575 4.49112 5.96798 4.50316 6.04948 4.49506C6.13097 4.48695 6.20922 4.45896 6.27736 4.41353C6.3455 4.36811 6.40144 4.30664 6.44026 4.23454C6.47908 4.16243 6.49959 4.08189 6.5 4C6.49816 3.86762 6.44637 3.74082 6.355 3.645C6.30745 3.59948 6.25138 3.5638 6.19 3.54ZM6 1C5.0111 1 4.0444 1.29324 3.22215 1.84265C2.39991 2.39206 1.75904 3.17295 1.3806 4.08658C1.00217 5.00021 0.90315 6.00555 1.09608 6.97545C1.289 7.94536 1.76521 8.83627 2.46447 9.53553C3.16373 10.2348 4.05465 10.711 5.02455 10.9039C5.99446 11.0969 6.99979 10.9978 7.91342 10.6194C8.82705 10.241 9.60794 9.6001 10.1573 8.77785C10.7068 7.95561 11 6.98891 11 6C11 5.34339 10.8707 4.69321 10.6194 4.08658C10.3681 3.47995 9.99983 2.92876 9.53554 2.46447C9.07124 2.00017 8.52005 1.63188 7.91342 1.3806C7.30679 1.12933 6.65661 1 6 1V1ZM6 10C5.20888 10 4.43552 9.7654 3.77772 9.32588C3.11992 8.88635 2.60723 8.26164 2.30448 7.53073C2.00173 6.79983 1.92252 5.99556 2.07686 5.21964C2.2312 4.44371 2.61217 3.73098 3.17158 3.17157C3.73099 2.61216 4.44372 2.2312 5.21964 2.07686C5.99557 1.92252 6.79983 2.00173 7.53074 2.30448C8.26164 2.60723 8.88635 3.11992 9.32588 3.77772C9.76541 4.43552 10 5.20887 10 6C10 7.06087 9.57858 8.07828 8.82843 8.82843C8.07828 9.57857 7.06087 10 6 10V10Z" fill="#9E9E9E"/>
+                                                </svg>
+                                                Image size Limit should be 125kb Max.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="account__form--container">
+                                        <form action="#">
+                                            <div class="row m-0">
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group">
+                                                        <label for="name">First Name</label>
+                                                        <input type="text" id="name" placeholder="First name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group">
+                                                        <label for="lastName">Last Name</label>
+                                                        <input type="text" id="lastName" placeholder="Last name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group position-relative">
+                                                        <label for="email">Email</label>
+                                                        <input type="email" id="email" placeholder="jhondoe@mail.com">
+                                                        <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.666504 0.666504L3.99984 3.99984L7.33317 0.666504H0.666504Z" fill="#616161"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group">
+                                                        <label for="phone">Phone number</label>
+                                                        <input type="text" id="phone" placeholder="04 123 741 45">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="password-tab" role="tabpanel" aria-labelledby="password">
+                                <div class="account__right--tab">
+                                    <div class="account__form--container">
+                                        <form action="#">
+                                            <div class="row m-0">
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group position-relative">
+                                                        <label for="password_">Current Password</label>
+                                                        <input class="password__input password" type="password" id="password_" placeholder="********">
+                                                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password position-absolute"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row m-0">
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group position-relative">
+                                                        <label for="newPass">New Password</label>
+                                                        <input class="password__input account__new--password password-new" type="password" id="newPass" placeholder="********">
+                                                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password-new position-absolute"></span>
+                                                    </div>
+                                                    <div class="password-strength-group account__password--strength" data-strength="">
+                                                        <div id="password-strength-meter " class="password-strength-meter">
+                                                            <span class="bar__empty"></span>
+                                                            <span class="bar__empty"></span>
+                                                            <span class="bar__empty"></span>
+                                                            <span class="bar__empty"></span>
+                                                        </div>
+                                                        <div class="password-strength-message">
+                                                            <div class="message-item">
+                                                                Weak Password
+                                                            </div>
+
+                                                            <div class="message-item">
+                                                                Medium
+                                                            </div>
+
+                                                            <div class="message-item">
+                                                                Strong
+                                                            </div>
+
+                                                            <div class="message-item">
+                                                                Very Strong!
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form__group position-relative">
+                                                        <label for="confirmPass">Confirm Password</label>
+                                                        <input class="password__input password-confirm" type="password" id="confirmPass" placeholder="********">
+                                                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password-confirm position-absolute"></span>
+                                                    </div>
+                                                    <div class="match__password--alert">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6 5.5C5.86739 5.5 5.74022 5.55268 5.64645 5.64645C5.55268 5.74021 5.5 5.86739 5.5 6V8C5.5 8.13261 5.55268 8.25979 5.64645 8.35355C5.74022 8.44732 5.86739 8.5 6 8.5C6.13261 8.5 6.25979 8.44732 6.35356 8.35355C6.44732 8.25979 6.5 8.13261 6.5 8V6C6.5 5.86739 6.44732 5.74021 6.35356 5.64645C6.25979 5.55268 6.13261 5.5 6 5.5ZM6.19 3.54C6.06827 3.48999 5.93173 3.48999 5.81 3.54C5.74863 3.5638 5.69255 3.59948 5.645 3.645C5.60084 3.6936 5.56532 3.74941 5.54 3.81C5.51201 3.86934 5.49831 3.93441 5.5 4C5.49962 4.0658 5.51223 4.13103 5.53712 4.19195C5.562 4.25287 5.59866 4.30828 5.645 4.355C5.6936 4.39917 5.74941 4.43468 5.81 4.46C5.88575 4.49112 5.96798 4.50316 6.04948 4.49506C6.13097 4.48695 6.20922 4.45896 6.27736 4.41353C6.3455 4.36811 6.40144 4.30664 6.44026 4.23454C6.47908 4.16243 6.49959 4.08189 6.5 4C6.49816 3.86762 6.44637 3.74082 6.355 3.645C6.30745 3.59948 6.25138 3.5638 6.19 3.54ZM6 1C5.0111 1 4.0444 1.29324 3.22215 1.84265C2.39991 2.39206 1.75904 3.17295 1.3806 4.08658C1.00217 5.00021 0.90315 6.00555 1.09608 6.97545C1.289 7.94536 1.76521 8.83627 2.46447 9.53553C3.16373 10.2348 4.05465 10.711 5.02455 10.9039C5.99446 11.0969 6.99979 10.9978 7.91342 10.6194C8.82705 10.241 9.60794 9.6001 10.1573 8.77785C10.7068 7.95561 11 6.98891 11 6C11 5.34339 10.8707 4.69321 10.6194 4.08658C10.3681 3.47995 9.99983 2.92876 9.53554 2.46447C9.07124 2.00017 8.52005 1.63188 7.91342 1.3806C7.30679 1.12933 6.65661 1 6 1ZM6 10C5.20888 10 4.43552 9.7654 3.77772 9.32588C3.11992 8.88635 2.60723 8.26164 2.30448 7.53073C2.00173 6.79983 1.92252 5.99556 2.07686 5.21964C2.2312 4.44371 2.61216 3.73098 3.17158 3.17157C3.73099 2.61216 4.44372 2.2312 5.21964 2.07686C5.99557 1.92252 6.79983 2.00173 7.53074 2.30448C8.26164 2.60723 8.88635 3.11992 9.32588 3.77772C9.76541 4.43552 10 5.20887 10 6C10 7.06087 9.57858 8.07828 8.82843 8.82843C8.07828 9.57857 7.06087 10 6 10Z" fill="#D84315"/>
+                                                        </svg>
+                                                        Password should be Match
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account__action--container">
+                <button class="cancel__btn">Cancel</button>
+                <button class="save__btn">save Changes</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--            Footer          -->
+
+
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__menu--container">
+                <ul class="d-flex align-items-center">
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="copyright__container">
+                    <p id="year">
+                        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+                        ©SaucedIt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

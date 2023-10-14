@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap"
+          rel="stylesheet"
+  />
+  <!--      Bootstrap     -->
+
+  <link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../resources/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="../resources/css/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="../resources/css/bootstrap-utilities.min.css" />
+  <link rel="stylesheet" href="../resources/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" href="../resources/css/style.css" />
+
+  <!--Bootstrap JS-->
+  <script src="../resources/js/jquery.min.js"></script>
+  <script src="../resources/js/bootstrap.min.js"></script>
+  <script src="../resources/js/bootstrap.bundle.min.js"></script>
+  <title>Saucedlt</title>
+</head>
+<body>
+<section class="color__bg--section">
+  <div class="row align-items-center justify-content-center vh-100 m-0">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+      <div class="signup__content--container verification__mail--container">
+        <div class="signin__top--content d-flex justify-content-between">
+          <h2>Verification Code</h2>
+          <img class="img-fluid" src="../resources/images/logo/logo.png" alt="signin logo">
+        </div>
+        <p class="mb-5">We send you on mail.</p>
+        <p>We’ve send you code on john<span>****@</span>gmail.com</p>
+        <form action="../pages/success.html">
+          <div class="input__group--container" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+            <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
+            <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
+            <input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
+            <input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" />
+          </div>
+          <button class="sign__in--btn" type="submit">Continue</button>
+          <div class="c-hr mb-4"></div>
+          <p class="text-center m-0">Did not receive the email? Check your spam filter, or</p>
+          <button class="secondary__btn mt-3">Resend Code</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

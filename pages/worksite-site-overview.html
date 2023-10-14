@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap"
+            rel="stylesheet"
+    />
+    <!--      Bootstrap     -->
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../resources/css/bootstrap-utilities.min.css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="../resources/css/style.css"/>
+
+    <!--Bootstrap JS-->
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../resources/js/site.js"></script>
+    <title>Worksite Overview</title>
+</head>
+<body>
+<!--Header Section-->
+<header>
+    <div class="menu__bar" id="navBar">
+        <div class="line-one"></div>
+        <div class="line-two"></div>
+        <div class="line-three"></div>
+    </div>
+    <div class="header__profile--container">
+        <div class="dropdown header__business--profile">
+            <button class="dropdown-toggle" type="button" id="headerdropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <div class="navbar__left--info">
+                    <p class="header__profile">Business Profiles</p>
+                    <ul class="nav__profile--ul">
+                        <li>Cracker Jack Hospitality</li>
+                    </ul>
+                </div>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="headerdropdown">
+                <li><a class="dropdown-item li__one" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Account Profile</span>
+                </a></li>
+                <li><a class="dropdown-item li__two" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Own Profile</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="header__right--container">
+            <div class="chat__notification">
+                <a href="./chat.html">
+                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3333 5.8196V13.3363C17.3333 14.2529 16.5833 15.0029 15.6666 15.0029H3.99996L0.666626 18.3363V3.33626C0.666626 2.4196 1.41663 1.6696 2.33329 1.6696H10.75C10.7 1.93626 10.6666 2.2196 10.6666 2.50293C10.6666 4.80293 12.5333 6.6696 14.8333 6.6696C15.775 6.6696 16.6333 6.3446 17.3333 5.8196ZM12.3333 2.50293C12.3333 3.88626 13.45 5.00293 14.8333 5.00293C16.2166 5.00293 17.3333 3.88626 17.3333 2.50293C17.3333 1.1196 16.2166 0.00292969 14.8333 0.00292969C13.45 0.00292969 12.3333 1.1196 12.3333 2.50293Z" fill="#F16532"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__profile--details" id="profile">
+                <img src="../resources/images/profile.png" alt="profile"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+        </div>
+        <ul class="profile__menu--container menu__show" id="profileMenu">
+            <li>
+                <h2>Good Morning, Krishna</h2>
+                <p>Prject Admin</p>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <a href="./account-settings.html">Account Settings</a>
+            </li>
+            <li class="log__out--menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                <span><a href="../index.html">Log Out</a></span>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="content">
+    <!--Left Menu-->
+    <div class="left__menu--container navmenu__show" id="leftMenu">
+        <img src="../resources/images/logo/logo.png" alt="logo"/>
+        <ul class="left__menu--items">
+            <li class="each__menu--item">
+                <a href="./dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Dashboard
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="./payroll-entries.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Payroll Entries
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="all-employees.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Employees
+                </a>
+            </li>
+            <li class="each__menu--item dropdown__menu" id="dropdown">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    Job Listings
+                </a>
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M1 1L6.29289 6.29289C6.68342 6.68342 7.31658 6.68342 7.70711 6.29289L13 1"
+                            stroke="#7D7D7E"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                    />
+                </svg>
+            </li>
+            <li class="dropdown__menu--items menu__show position-relative" id="dropdownMenu">
+                <div class="position-absolute left__border--line"></div>
+                <ul>
+                    <li class="dropdown__menu--item">
+                        <span><a href="./job-active.html">Active</a></span>
+                    </li>
+                    <li class="dropdown__menu--item">
+                        <span><a href="#">Draft</a></span>
+                    </li>
+                    </li>
+                    <li class="dropdown__menu--item">
+                        <span><a href="#">Archived</a></span>
+                    </li>
+                </ul>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                    Event Register
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    Performance Management
+                </a>
+            </li>
+            <li class="each__menu--item">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F16532" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    Jobs Board
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content-container">
+    <div class="container-layout">
+        <div class="breadcums">
+            <h3>Job Listings Active&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<span
+                    class="active_breadcrumb">All Applications</span></h3>
+        </div>
+
+
+        <!--            Page Content            -->
+
+        <div class="payroll__tab--container">
+            <h2>Barista</h2>
+
+            <!--Tab pills-->
+
+            <nav id="payroll-nav">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#all-payroll"
+                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                        All Applications
+                    </button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#pending-payroll"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        Invited
+                    </button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#uploaded-payroll" type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/sva" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Short listed
+                    </button>
+                    <button class="nav-link" id="nav-nofit-tab" data-bs-toggle="tab" data-bs-target="#no-fit"
+                            type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-octagon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        Not a fit
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!--Search Action-->
+
+        <div class="payroll__search--container">
+            <div class="row m-0">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="row m-0">
+                        <div class="col-lg-12 col-md-12 col-12 p-0">
+                            <div class="payroll__search">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.33326 7.33326H7.8066L7.61993 7.15326C8.41993 6.21993 8.83326 4.9466 8.6066 3.59326C8.29326 1.73993 6.7466 0.259929 4.87993 0.0332621C2.05993 -0.313405 -0.313405 2.05993 0.0332621 4.87993C0.259929 6.74659 1.73993 8.29326 3.59326 8.6066C4.9466 8.83326 6.21993 8.41993 7.15326 7.61993L7.33326 7.80659V8.33326L10.1666 11.1666C10.4399 11.4399 10.8866 11.4399 11.1599 11.1666C11.4333 10.8933 11.4333 10.4466 11.1599 10.1733L8.33326 7.33326ZM4.33326 7.33326C2.67326 7.33326 1.33326 5.99326 1.33326 4.33326C1.33326 2.67326 2.67326 1.33326 4.33326 1.33326C5.99326 1.33326 7.33326 2.67326 7.33326 4.33326C7.33326 5.99326 5.99326 7.33326 4.33326 7.33326Z"
+                                          fill="#616161"/>
+                                </svg>
+                                <input type="text" name="search" id="payroll-search" placeholder="Search...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payroll__table--container">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="all-payroll" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <h3 class="table__heading">Applications</h3>
+                    <table class="table table-borderless payroll__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Personal Information</th>
+                            <th scope="col">Resume</th>
+                            <th scope="col">Certificates</th>
+                            <th scope="col">Qualifications</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Louie
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>McGee</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+
+                            <td class="d-flex">
+                                <div class="action__btn recent__invitation">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                    <div class="invitation__recent--container">
+                                        <ul>
+                                            <li>Invite</li>
+                                            <li>Short list</li>
+                                            <li>Not a fit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Maren
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>George</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Makenna
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Saris</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Levin</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Gretchen
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Schleifer</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Wilson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Aminoff</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Erin
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Korsgaard</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Passaquindici</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rosser</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rhiel Madsen</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pending-payroll" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <h3 class="table__heading">Invited</h3>
+                    <table class="table table-borderless payroll__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Contract</th>
+                            <th scope="col">Compliance</th>
+                            <th scope="col">Personal</th>
+                            <th scope="col">Tax</th>
+                            <th scope="col">Bank</th>
+                            <th scope="col">Super</th>
+                            <th scope="col">Acction</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Louie
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>McGee</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn recent__invitation">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                    <div class="invitation__recent--container">
+                                        <ul>
+                                            <li>View</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Maren
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>George</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Makenna
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Saris</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Levin</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Gretchen
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Schleifer</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Wilson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Aminoff</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Erin
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td></td>
+                            <td>Korsgaard</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Passaquindici</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rosser</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td></td>
+                            <td>Rhiel Madsen</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day" id="rowNumber">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="uploaded-payroll" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <h3 class="table__heading">Short listed</h3>
+                    <table class="table table-borderless payroll__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Personal Information</th>
+                            <th scope="col">Resume</th>
+                            <th scope="col">Certificates</th>
+                            <th scope="col">Qualifications</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Louie
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>McGee</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn recent__invitation">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                    <div class="invitation__recent--container">
+                                        <ul>
+                                            <li>Invite</li>
+                                            <li>Not a fit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Maren
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>George</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Makenna
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Saris</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Levin</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Gretchen
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Schleifer</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Wilson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Aminoff</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Erin
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Korsgaard</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Passaquindici</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rosser</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rhiel Madsen</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day" id="rowNumber">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="no-fit" role="tabpanel" aria-labelledby="nav-notfit-tab">
+                    <h3 class="table__heading">Not a fit</h3>
+                    <table class="table table-borderless payroll__table">
+                        <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Personal Information</th>
+                            <th scope="col">Resume</th>
+                            <th scope="col">Certificates</th>
+                            <th scope="col">Qualifications</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Louie
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>McGee</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn recent__invitation">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                    <div class="invitation__recent--container">
+                                        <ul>
+                                            <li>Invite</li>
+                                            <li>Not a fit</li>
+                                            <li>Delete</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Maren
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>George</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Makenna
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Saris</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Levin</td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="complete__tick">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Gretchen
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Schleifer</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Wilson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Aminoff</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Erin
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Korsgaard</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Passaquindici</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Phillip
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rosser</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox__container">Emerson
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>Rhiel Madsen</td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cross_check">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <div class="action__btn">
+                                    <svg  width="24" height="24" viewBox="0 0 14 4" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
+                                              fill="#F16532"/>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom__pagination--container">
+                        <div class="page__number">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span class="page__count page__fill">01</span>
+                            <span class="page__count">02</span>
+                            <span class="page__count">03</span>
+                            <span>...</span>
+                            <span class="page__count">24</span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </span>
+                        </div>
+                        <div class="row__number">
+                            <div class="chart__top--right">
+                                <select name="day" id="rowNumber">
+                                    <option selected value="0">10 Rows</option>
+                                    <option value="1">20 Rows</option>
+                                    <option value="2">30 Rows</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--            Footer          -->
+
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__menu--container">
+                <ul class="d-flex align-items-center">
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="copyright__container">
+                    <p id="year">
+                        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+                        ©SaucedIt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
