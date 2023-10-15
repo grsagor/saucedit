@@ -1415,17 +1415,13 @@ header {
 }
 
 .chart__top--right {
-    background: #FAFAFA;
     border: 1px solid var(--red-color);
     border-radius: 4px;
     padding: 13px;
     color: var(--red-color);
-}
-
-.chart__top--right svg {
-    position: absolute;
-    top: 24px;
-    right: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .chart__top--right svg path {
@@ -1545,7 +1541,7 @@ header {
     background: #FFFFFF;
     border-radius: 12px;
     width: 100%;
-    padding: 13px 16px 0 16px;
+    padding: 13px 16px 1px 16px;
 }
 
 .payroll__tab--container h2 {
@@ -1555,7 +1551,7 @@ header {
     font-size: 34px;
     line-height: 42px;
     color: #212121;
-    margin-bottom: 57px;
+    margin-bottom: 30px;
 }
 
 #payroll-nav .nav-tabs {
@@ -1634,6 +1630,8 @@ header {
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
 }
 
 .csv__download--btn {
@@ -1653,7 +1651,7 @@ header {
 }
 
 .payroll__search {
-    width: 100%;
+    flex: 1;
     background: #FAFAFA;
     border-radius: 12px;
     padding: 14px 16px;
@@ -1694,8 +1692,8 @@ header {
 }
 
 .payroll__filter--container {
-    justify-content: space-between;
-    align-items: center;
+    display: flex;
+    gap: 10px;
 }
 
 .payroll__filter--bg {
@@ -1757,6 +1755,10 @@ header {
     font-size: 14px;
     line-height: 20px;
     color: #212121;
+}
+
+.table_red_color {
+    color: var(--red-color) !important;
 }
 
 #all-payroll>table>tbody>tr>td:nth-child(8),
@@ -2915,6 +2917,7 @@ input:checked~.checkmark:after {
     width: 18px;
     height: 18px;
     margin-top: -3px;
+    border-radius: 50%;
 }
 
 .filter__checkbox .filter__group .checkmark {
@@ -3522,8 +3525,11 @@ input::placeholder {
     stroke: var(--red-color);
 }
 
-.sync__filter--btn svg path {
+.sync__filter--btn svg path, .job__filter--btn svg path, .venues__filter--btn svg path{
     fill: var(--red-color);
+}
+.sync__filter--btn.payroll__filter--bg svg path, .job__filter--btn.payroll__filter--bg svg path, .venues__filter--btn.payroll__filter--bg svg path{
+    fill: #FFF;
 }
 
 .bar__chart--top .chart__top--right {
@@ -3994,4 +4000,8 @@ body>div.content-container>div>div.new__listing>div.listing__submit>div>button.s
 }
 .line__chart--container .chart__top--right {
         border: none;
+}
+.unselect_button {
+    background: none;
+    border: none;
 }
