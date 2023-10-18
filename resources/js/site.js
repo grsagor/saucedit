@@ -68,13 +68,6 @@ $(document).ready(function (){
                 document.querySelector('.job__listings').classList.remove('job__action--btn');
             }
         })
-
-        // document.querySelectorAll('.svg__action').forEach(function (e) {
-        //     e.addEventListener('click', function (el){
-        //         let close = document.getElementById('svg').parentElement;
-        //         close.classList.toggle('job__action--btn')
-        //     })
-        // })
     }
 
     if(document.getElementById("headerdropdown")){

@@ -44,6 +44,8 @@ var barChartData = {
 };
 
 var chartOptions = {
+    barPercentage: 1.0,
+    categoryPercentage: 0.6,
     plugins: {
         legend: {
             position: "bottom"
@@ -55,6 +57,11 @@ var chartOptions = {
         text: "Chart.js Bar Chart"
     },
     scales: {
+        x: {
+            grid: {
+                drawOnChartArea: false
+            }
+        },
         y: {
             beginAtZero: true,
             max: 50,
@@ -85,84 +92,12 @@ window.onload = function () {
 
             // Redirect to the corresponding website based on the dataset label
             if (datasetLabel === "Safework") {
-                window.location.href = "https://www.facebook.com";
-            } else if (datasetLabel === "Safework") {
-                window.location.href = "https://www.twitter.com";
+                window.location.href = "../pages/safework-1.html";
             } else if (datasetLabel === "Work Health and Safety") {
-                window.location.href = "https://www.instagram.com";
+                window.location.href = "../pages/safework-1.html";
             } else if (datasetLabel === "Others") {
-                window.location.href = "https://www.instagram.com";
+                window.location.href = "../pages/safework-1.html";
             }
         }
     };
 };
-
-
-
-/*Bar Chart End*/
-
-/*Line Chart Start*/
-
-var linechart = document.getElementById('myChart').getContext("2d");
-
-var myChart = new Chart(linechart, {
-    type: 'line',
-    data: {
-        labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
-        datasets: [{
-            label: "Data",
-            borderColor: "#80b6f4",
-            pointBorderColor: "#80b6f4",
-            pointBackgroundColor: "#5E35B1",
-            pointHoverBackgroundColor: "#5E35B1",
-            pointHoverBorderColor: "#80b6f4",
-            pointBorderWidth: 0,
-            pointHoverRadius: 5,
-            pointHoverBorderWidth: 1,
-            pointRadius: 4,
-            fill: true,
-            borderWidth: 1,
-            data: [10, 12, 15, 17, 18, 17, 16]
-        }]
-    },
-    options: {
-        tooltips: {
-            callbacks: {
-                labelColor: function (tooltipItem, chart) {
-                    return {
-                        borderColor: 'rgb(255, 0, 0)',
-                        backgroundColor: 'rgb(255, 0, 0)'
-                    }
-                }
-            }
-        },
-        legend: {
-            display: false
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    display: false,
-                },
-                gridLines: {
-                    drawTicks: false,
-                    display: false
-                }
-
-            }],
-            xAxes: [{
-                gridLines: {
-                    zeroLineColor: "transparent"
-                },
-                ticks: {
-                    display: false,
-                    beginAtZero: true
-                },
-                gridLines: {
-                    display: false
-                }
-            }]
-        }
-    }
-});
-    /*Line Chart End*/
