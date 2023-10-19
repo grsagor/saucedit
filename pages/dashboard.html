@@ -15,6 +15,7 @@
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
     <script src="../resources/js/site.js"></script>
+    <script src="../resources/js/fiter-1.js"></script>
 
     <title>Saucedlt | Dashboard</title>
 </head>
@@ -243,14 +244,14 @@
                 <div class="col-lg-4 col-md-4 col-12 ps-0 c__pr--0 c__mb--2">
                     <div class="dashboard__top--card dashboard__card--bg bg__1">
                         <div class="card__details--heading d-flex justify-content-between align-items-center">
-                            <img src="../resources/images/backgrounds/card-icon-1.png" alt="icon">
-                            <img src="../resources/images/backgrounds/card-icon-2.png" alt="icon">
+                            <button><img src="../resources/images/backgrounds/card-icon-1.png" alt="icon"></button>
+                            <button><img src="../resources/images/backgrounds/card-icon-2.png" alt="icon"></button>
                         </div>
                         <div class="card__details--bottom">
                             <h2>
                                 23
                                 <span>
-                                    <img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow">
+                                    <button><img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow"></button>
                                 </span>
                             </h2>
                             <h3>Total Current Employees</h3>
@@ -260,14 +261,14 @@
                 <div class="col-lg-4 col-md-4 col-12 c__pr--0 c__pl--0 c__mb--2">
                     <div class="dashboard__top--card dashboard__card--bg bg__2">
                         <div class="card__details--heading d-flex justify-content-between align-items-center">
-                            <img src="../resources/images/backgrounds/card-icon-3.png" alt="icon">
-                            <img src="../resources/images/backgrounds/card-icon-2.png" alt="icon">
+                            <button><img src="../resources/images/backgrounds/card-icon-3.png" alt="icon"></button>
+                            <button><img src="../resources/images/backgrounds/card-icon-2.png" alt="icon"></button>
                         </div>
                         <div class="card__details--bottom">
                             <h2>
                                 23
                                 <span>
-                                    <img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow">
+                                    <button><img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow"></button>
                                 </span>
                             </h2>
                             <h3 class="position-relative">
@@ -279,23 +280,23 @@
                 <div class="col-lg-4 col-md-4 col-12 pe-0 c__pr--0 c__pl--0 c__mb--2">
                     <div class="row m-0">
                         <div class="col-lg-12 col-md-12 col-12 p-0">
-                            <div
+                            <button
                                 class="dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center c__mb--2">
                                 <img src="../resources/images/backgrounds/card-icon-4.png" alt="icon">
                                 <div class="card__details--right">
                                     <h2>15</h2>
                                     <h3>Delegated Tasks</h3>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                         <div class="col-lg-12 col-md-12 col-12 p-0">
-                            <div class="dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center">
+                            <button class="dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center">
                                 <img src="../resources/images/backgrounds/card-icon-4.png" alt="icon">
                                 <div class="card__details--right">
                                     <h2>15</h2>
                                     <h3>Total Resolved Events</h3>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -308,20 +309,71 @@
                                 <p>Total Events</p>
                                 <h3>234</h3>
                             </div>
-                            <div class="d-flex gap-3">
-                                <div class="chart__top--right">
-                                    <select name="day" id="day">
-                                        <option value="0">Selected Events</option>
-                                        <option value="1">Tomorrow</option>
-                                        <option value="2">Yesterday</option>
-                                    </select>
+                            <div class="d-flex gap-3 abc">
+                                <div class="ps-0 position-relative">
+                                    <div class="chart__top--right job__filter--btn" id="jobFilter">
+                                        Priority
+                                        <svg width="14" height="7" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.666504 0.666504L3.99984 3.99984L7.33317 0.666504H0.666504Z" fill="#616161"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="job__filter--list job__list" id="jobFilterContent">
+                                        <div class="filter__heading">
+                                            <span>Priority</span>
+                                            <span>Clear</span>
+                                        </div>
+                                        <div class="filter__checkbox">
+                                            <div class="filter__group mt-2">
+                                                <label class="checkbox__container">Low
+                                                    <input type="radio" name="priority_radio" value="Low">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="filter__group">
+                                                <label class="checkbox__container">Critical
+                                                    <input type="radio" name="priority_radio" value="Critical">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="chart__top--right">
-                                    <select name="day" id="day">
-                                        <option value="0">This week</option>
-                                        <option value="1">Tomorrow</option>
-                                        <option value="2">Yesterday</option>
-                                    </select>
+                                <div class="ps-0 position-relative">
+                                    <div class="chart__top--right venues__filter--btn" id="venusFilter">
+                                        Status
+                                        <svg width="14" height="7" viewBox="0 0 8 4" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.666504 0.666504L3.99984 3.99984L7.33317 0.666504H0.666504Z"
+                                                fill="#616161" />
+                                        </svg>
+                                    </div>
+                                    <div class="job__filter--list venus__list" id="venusFilterContent">
+                                        <div class="filter__heading">
+                                            <span>Status</span>
+                                            <span>Clear</span>
+                                        </div>
+                                        <div class="filter__checkbox">
+                                            <div class="c-border mt-2 mb-2"></div>
+                                            <div class="filter__group">
+                                                <label class="checkbox__container">Reported
+                                                    <input type="radio" name="status_check" value="Reported">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="filter__group">
+                                                <label class="checkbox__container">Outstanding
+                                                    <input type="radio" name="status_check" value="Outstanding">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="filter__group">
+                                                <label class="checkbox__container">Resolved
+                                                    <input type="radio" name="status_check" value="Resolved">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

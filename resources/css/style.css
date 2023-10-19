@@ -576,6 +576,7 @@ header {
     line-height: 20px;
     color: #212121;
     margin: 0;
+    text-align: left;
 }
 
 .card__details--right h3 {
@@ -648,13 +649,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 7px;
 }
 .bar__chart--container .chart__top--right, .line__chart--container .chart__top--right {
     background: #FAFAFA;
 }
 
-.chart__top--right svg path {
-    fill: #ffffff;
+.abc .chart__top--right svg path {
+    fill: #212121 !important;
 }
 
 .svg__fill svg path {
@@ -1281,6 +1283,7 @@ input::placeholder {
 
 .bar__chart--top .chart__top--right {
     border: 1px solid #F5F5F5 !important;
+    color: #212121;
 }
 
 .sync__filter--btn {
@@ -1429,4 +1432,9 @@ input::placeholder {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+button {
+    background: none;
+    border: none;
 }
