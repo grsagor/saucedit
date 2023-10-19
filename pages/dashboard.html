@@ -14,13 +14,14 @@
     <!--Bootstrap JS-->
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/bootstrap.bundle.min.js"></script>
     <script src="../resources/js/site.js"></script>
     <script src="../resources/js/fiter-1.js"></script>
 
     <title>Saucedlt | Dashboard</title>
 </head>
 
-<body>
+<body id="dashboard">
     <!--Header Section-->
     <header>
         <div class="menu__bar" id="navBar">
@@ -244,14 +245,38 @@
                 <div class="col-lg-4 col-md-4 col-12 ps-0 c__pr--0 c__mb--2">
                     <div class="dashboard__top--card dashboard__card--bg bg__1">
                         <div class="card__details--heading d-flex justify-content-between align-items-center">
-                            <button><img src="../resources/images/backgrounds/card-icon-1.png" alt="icon"></button>
-                            <button><img src="../resources/images/backgrounds/card-icon-2.png" alt="icon"></button>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../resources/images/backgrounds/card-icon-1.png" alt="icon">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../resources/images/backgrounds/card-icon-2.png" alt="icon">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card__details--bottom">
                             <h2>
                                 23
                                 <span>
-                                    <button><img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow"></button>
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow">
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
                                 </span>
                             </h2>
                             <h3>Total Current Employees</h3>
@@ -261,14 +286,38 @@
                 <div class="col-lg-4 col-md-4 col-12 c__pr--0 c__pl--0 c__mb--2">
                     <div class="dashboard__top--card dashboard__card--bg bg__2">
                         <div class="card__details--heading d-flex justify-content-between align-items-center">
-                            <button><img src="../resources/images/backgrounds/card-icon-3.png" alt="icon"></button>
-                            <button><img src="../resources/images/backgrounds/card-icon-2.png" alt="icon"></button>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../resources/images/backgrounds/card-icon-3.png" alt="icon">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../resources/images/backgrounds/card-icon-2.png" alt="icon">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card__details--bottom">
                             <h2>
                                 23
                                 <span>
-                                    <button><img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow"></button>
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="../resources/images/backgrounds/card-arrow-up.png" alt="arrow">
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
                                 </span>
                             </h2>
                             <h3 class="position-relative">
@@ -279,25 +328,30 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-12 pe-0 c__pr--0 c__pl--0 c__mb--2">
                     <div class="row m-0">
-                        <div class="col-lg-12 col-md-12 col-12 p-0">
-                            <button
-                                class="dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center c__mb--2">
-                                <img src="../resources/images/backgrounds/card-icon-4.png" alt="icon">
-                                <div class="card__details--right">
-                                    <h2>15</h2>
-                                    <h3>Delegated Tasks</h3>
-                                </div>
-                            </button>
+                        <div class="col-lg-12 col-md-12 col-12 p-0 dropdown">
+                                <button class="dropdown-toggle list__action--btn dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center c__mb--2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../resources/images/backgrounds/card-icon-4.png" alt="icon">
+                                    <div class="card__details--right">
+                                        <h2>15</h2>
+                                        <h3>Delegated Tasks</h3>
+                                    </div>                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                </ul>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-12 p-0">
-                            <button class="dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center">
+                        <div class="col-lg-12 col-md-12 col-12 p-0 dropdown">
+                            <button class="dropdown-toggle list__action--btn dashboard__top--card dashboard__card--bg bg__3 d-flex align-items-center c__mb--2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="../resources/images/backgrounds/card-icon-4.png" alt="icon">
                                 <div class="card__details--right">
                                     <h2>15</h2>
                                     <h3>Total Resolved Events</h3>
-                                </div>
-                            </button>
-                        </div>
+                                </div>                               </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                            </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -395,7 +449,7 @@
                             </div>
                         </div>
                         <hr class="line__chart--hr">
-                        <div class="position-relative">
+                        <button class="position-relative w-100">
                             <div class="d-flex mb-4">
                                 <div class="d-flex gap-3 flex-grow-1">
                                     <div class="d-flex flex-column align-items-center justify-content-center">
@@ -486,7 +540,7 @@
                                     <p class="m-0 progress-percentage">5%</p>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

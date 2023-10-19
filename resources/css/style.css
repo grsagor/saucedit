@@ -19,6 +19,7 @@
     font-weight: bold;
     src: url("../fonts/sf-pro/SFPRODISPLAYBOLD.OTF");
 }
+
 :root {
     --red-color: #F16532;
     --bg-color: #F6ECE1;
@@ -471,7 +472,7 @@ header {
 .dashboard__card--bg {
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
 }
 
 .content-container>div>div.row.m-0>div:nth-child(2)>div>div.card__details--bottom>h3>img {
@@ -490,7 +491,7 @@ header {
 }
 
 .bg__3 {
-    background-image: url("../../resources/images/backgrounds/card-bg-3.png");
+    background-image: url("../../resources/images/backgrounds/card-bg-3.png") !important;
     height: 75px;
     margin-bottom: 19px;
 }
@@ -505,6 +506,7 @@ header {
 }
 
 .card__details--bottom h2 {
+    display: flex;
     font-family: 'Qanelas';
     font-style: normal;
     font-weight: 700;
@@ -651,7 +653,9 @@ header {
     justify-content: space-between;
     gap: 7px;
 }
-.bar__chart--container .chart__top--right, .line__chart--container .chart__top--right {
+
+.bar__chart--container .chart__top--right,
+.line__chart--container .chart__top--right {
     background: #FAFAFA;
 }
 
@@ -1274,10 +1278,15 @@ input::placeholder {
     stroke: var(--red-color);
 }
 
-.sync__filter--btn svg path, .job__filter--btn svg path, .venues__filter--btn svg path{
+.sync__filter--btn svg path,
+.job__filter--btn svg path,
+.venues__filter--btn svg path {
     fill: var(--red-color);
 }
-.sync__filter--btn.payroll__filter--bg svg path, .job__filter--btn.payroll__filter--bg svg path, .venues__filter--btn.payroll__filter--bg svg path{
+
+.sync__filter--btn.payroll__filter--bg svg path,
+.job__filter--btn.payroll__filter--bg svg path,
+.venues__filter--btn.payroll__filter--bg svg path {
     fill: #FFF;
 }
 
@@ -1328,6 +1337,7 @@ input::placeholder {
     height: 5px;
     background: #F16532;
 }
+
 .progress {
     height: 5px;
 }
@@ -1349,9 +1359,11 @@ input::placeholder {
     font-size: 16px;
     font-weight: 500;
 }
+
 .line__chart--container .chart__top--right {
-        border: none;
+    border: none;
 }
+
 .unselect_button {
     background: none;
     border: none;
@@ -1367,9 +1379,11 @@ input::placeholder {
     border-radius: 12px;
     margin-top: 28px;
 }
+
 .bar__chart--top {
     padding: 24px 16px;
 }
+
 .chart__top--left p {
     font-family: 'Qanelas';
     font-style: normal;
@@ -1379,6 +1393,7 @@ input::placeholder {
     color: #9E9E9E;
     margin-bottom: 8px;
 }
+
 .chart__top--left h3 {
     font-family: 'Qanelas';
     font-style: normal;
@@ -1387,6 +1402,7 @@ input::placeholder {
     line-height: 25px;
     color: #212121;
 }
+
 .line__chart--container {
     width: 100%;
     min-height: 617px;
@@ -1396,11 +1412,13 @@ input::placeholder {
     margin-top: 28px;
     padding: 24px 16px;
 }
+
 .line__chart--top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .line__chart--top h3 {
     font-family: 'Qanelas';
     font-style: normal;
@@ -1409,20 +1427,28 @@ input::placeholder {
     line-height: 25px;
     color: #212121;
 }
-#venusFilterContent>div.filter__checkbox>div.filter__group>label>span, #jobFilterContent>div.filter__checkbox>div.filter__group>label>span {
+
+#venusFilterContent>div.filter__checkbox>div.filter__group>label>span,
+#jobFilterContent>div.filter__checkbox>div.filter__group>label>span {
     width: 18px;
     height: 18px;
     margin-top: -3px;
     border-radius: 50%;
 }
-#venusFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after, #jobFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after {
+
+#venusFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after,
+#jobFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after {
     left: 6px;
     top: 3px;
 }
+
 .line__chart--hr {
     background-color: #DFDFDF;
 }
-.line-one, .line-two, .line-three {
+
+.line-one,
+.line-two,
+.line-three {
     width: 25px;
     height: 2px;
     margin-bottom: 5px;
@@ -1437,4 +1463,42 @@ input::placeholder {
 button {
     background: none;
     border: none;
+}
+
+.list__action--btn {
+    outline: none;
+    background: transparent;
+    padding: 12px 16px;
+    border: 1px solid #F16532;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list__action--btn:hover {
+    background: var(--red-color);
+}
+
+.list__action--btn:hover svg path {
+    fill: #ffffff;
+}
+
+.list__action--btn::after {
+    content: '';
+    display: none !important;
+}
+
+.list__action--btn:focus {
+    background: var(--red-color);
+}
+
+.list__action--btn:focus svg path {
+    fill: #ffffff;
+}
+
+#dashboard .list__action--btn,
+#dashboard .list__action--btn:hover,
+#dashboard .list__action--btn:focus {
+    padding: 0;
+    border: none;
+    background: none;
 }
