@@ -35,7 +35,7 @@ $(document).ready(function (){
     document.addEventListener('click', function (e){
         if (jobFilterBtn != e.target){
             const hide = document.querySelector('.job__list');
-            hide.classList.remove('show__job')
+            hide.classList.remove('show__job');
         }
         const so = e.target.closest('.job__list');
         if (!so) return;
@@ -63,13 +63,21 @@ $(document).ready(function (){
     })
 
     document.addEventListener('click', function (e){
-        if (jobFilterBtn != e.target && jobFilterContent != e.target && !jobFilterContent.contains(e.target)){
+        if (jobFilterBtn == e.target || (jobFilterContent != e.target && !jobFilterContent.contains(e.target))){
             showPriority();
+            var selectedValue = $('input[name="priority_radio"]:checked').val();
+            if (!selectedValue && $('.show__job').length == 0) {
+                jobFilterBtn.classList.remove('payroll__filter--bg');
+            }
         }
     })
     document.addEventListener('click', function (e){
-        if (venusFilterBtn != e.target && venusFilterContent != e.target && !venusFilterContent.contains(e.target)){
+        if (venusFilterBtn == e.target || (venusFilterContent != e.target && !venusFilterContent.contains(e.target))){
             showStatus();
+            var selectedValue = $('input[name="status_check"]:checked').val();
+            if (!selectedValue && $('.show__venues').length == 0) {
+                venusFilterBtn.classList.remove('payroll__filter--bg');
+            }
         }
     })
 
@@ -99,6 +107,11 @@ $(document).ready(function (){
         $('#venusFilter').html(html);
         $('input[name="status_check"]:checked').prop('checked', false);
     });
+
+    $('.filter_clear_button').click(function() {
+        const name = $(this).data('name');
+        $(`input[name="${name}"]:checked`).prop('checked', false)
+    })
 
 })
 

@@ -260,18 +260,18 @@
                 <div class="mt-lg-0 mt-sm-4">
                     <div class="payroll__filter--container m-0">
                         <div class="ps-0 position-relative">
-                            <div class="chart__top--right job__filter--btn" id="jobFilter">
+                            <button class="chart__top--right job__filter--btn" id="jobFilter">
                                 Priority
                                 <svg width="14" height="7" viewBox="0 0 8 4" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.666504 0.666504L3.99984 3.99984L7.33317 0.666504H0.666504Z"
                                         fill="#616161" />
                                 </svg>
-                            </div>
+                            </button>
                             <div class="job__filter--list job__list" id="jobFilterContent">
                                 <div class="filter__heading">
                                     <span>Priority</span>
-                                    <span>Clear</span>
+                                    <button data-name="priority_radio" class="filter_clear_button">Clear</button>
                                 </div>
                                 <div class="filter__checkbox">
                                     <div class="filter__group mt-2">
@@ -290,18 +290,18 @@
                             </div>
                         </div>
                         <div class="ps-0 position-relative">
-                            <div class="chart__top--right venues__filter--btn" id="venusFilter">
+                            <button class="chart__top--right venues__filter--btn" id="venusFilter">
                                 Status
                                 <svg width="14" height="7" viewBox="0 0 8 4" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.666504 0.666504L3.99984 3.99984L7.33317 0.666504H0.666504Z"
                                         fill="#616161" />
                                 </svg>
-                            </div>
+                            </button>
                             <div class="job__filter--list venus__list" id="venusFilterContent">
                                 <div class="filter__heading">
                                     <span>Status</span>
-                                    <span>Clear</span>
+                                    <button data-name="status_check" class="filter_clear_button">Clear</button>
                                 </div>
                                 <div class="filter__checkbox">
                                     <div class="c-border mt-2 mb-2"></div>
@@ -327,37 +327,11 @@
                             </div>
                         </div>
                         <div class="ps-0 p-sm-0 position-relative">
-                            <div class="chart__top--right sync__filter--btn position-relative svg__fill payroll__filter--bg d-flex justify-content-center align-items-center gap-2"
+                            <button class="chart__top--right sync__filter--btn position-relative svg__fill payroll__filter--bg d-flex justify-content-center align-items-center gap-2"
                                 id="syncFilter">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                                <i class="fa-solid fa-plus"></i>
                                 Add
-                            </div>
-                            <div class="job__filter--list sync__list" id="syncFilterContent">
-                                <div class="filter__heading">
-                                    <span>Sync</span>
-                                    <span>Clear</span>
-                                </div>
-                                <div class="filter__checkbox">
-                                    <div class="filter__group mt-2">
-                                        <label class="radio-container">KeyPay Sync
-                                            <input type="radio" name="sync">
-                                            <span class="radio-checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="filter__group">
-                                        <label class="radio-container">Xero Sync
-                                            <input type="radio" name="sync">
-                                            <span class="radio-checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="filter__group">
-                                        <label class="radio-container">Deputy Sync
-                                            <input type="radio" name="sync">
-                                            <span class="radio-checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -402,12 +376,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -431,12 +402,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -460,12 +428,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -489,12 +454,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -518,12 +480,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -547,12 +506,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -576,12 +532,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -605,12 +558,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -634,12 +584,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -663,12 +610,9 @@
                                     <td class="table_red_color">Reported</td>
                                     <td class="d-flex">
                                         <div class="dropdown">
-                                            <button class="dropdown-toggle list__action--btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <svg class="svg__action"id="svg2"  width="24" height="24" viewBox="0 0 14 4" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1.99992 0.333496C1.08325 0.333496 0.333252 1.0835 0.333252 2.00016C0.333252 2.91683 1.08325 3.66683 1.99992 3.66683C2.91659 3.66683 3.66659 2.91683 3.66659 2.00016C3.66659 1.0835 2.91659 0.333496 1.99992 0.333496ZM11.9999 0.333496C11.0833 0.333496 10.3333 1.0835 10.3333 2.00016C10.3333 2.91683 11.0833 3.66683 11.9999 3.66683C12.9166 3.66683 13.6666 2.91683 13.6666 2.00016C13.6666 1.0835 12.9166 0.333496 11.9999 0.333496ZM6.99992 0.333496C6.08325 0.333496 5.33325 1.0835 5.33325 2.00016C5.33325 2.91683 6.08325 3.66683 6.99992 3.66683C7.91658 3.66683 8.66658 2.91683 8.66658 2.00016C8.66658 1.0835 7.91658 0.333496 6.99992 0.333496Z"
-                                                          fill="#F16532"/>
-                                                </svg>
+                                            <button class="dropdown-toggle list__action--btn menu-icon-design" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Edit</a></li>
@@ -736,7 +680,7 @@
             </div>
         </footer>
     </div>
-
+    <script src="https://kit.fontawesome.com/7e596160a4.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

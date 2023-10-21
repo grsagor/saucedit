@@ -659,6 +659,7 @@ header {
     background: #FAFAFA;
 }
 
+.efg .chart__top--right svg path,
 .abc .chart__top--right svg path {
     fill: #212121 !important;
 }
@@ -811,7 +812,7 @@ header {
 
 .payroll__filter--bg {
     background: var(--red-color) !important;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .show__job {
@@ -1287,9 +1288,10 @@ input::placeholder {
 .sync__filter--btn.payroll__filter--bg svg path,
 .job__filter--btn.payroll__filter--bg svg path,
 .venues__filter--btn.payroll__filter--bg svg path {
-    fill: #FFF;
+    fill: #FFF !important;
 }
 
+.efg .chart__top--right,
 .bar__chart--top .chart__top--right {
     border: 1px solid #F5F5F5 !important;
     color: #212121;
@@ -1331,6 +1333,7 @@ input::placeholder {
 
 .progressbar-container {
     padding-right: 60px;
+    text-align: left;
 }
 
 .progress-bar {
@@ -1428,6 +1431,7 @@ input::placeholder {
     color: #212121;
 }
 
+#syncFilterContent>div.filter__checkbox>div.filter__group>label>span,
 #venusFilterContent>div.filter__checkbox>div.filter__group>label>span,
 #jobFilterContent>div.filter__checkbox>div.filter__group>label>span {
     width: 18px;
@@ -1436,6 +1440,7 @@ input::placeholder {
     border-radius: 50%;
 }
 
+#syncFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after,
 #venusFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after,
 #jobFilterContent>div.filter__checkbox>div.filter__group>label>.checkmark:after {
     left: 6px;
@@ -1501,4 +1506,97 @@ button {
     padding: 0;
     border: none;
     background: none;
+}
+
+.filter__heading span:first-child {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+.medium-icon-container {
+    background: #FCB196 !important;
+    color: #F16532 !important;
+    width: 44px !important;
+    aspect-ratio: 1/1 !important;
+    border-radius: 10px !important;
+}
+.medium-icon-container.three-dots {
+    background: #F27343 !important;
+    color: #90CAF9 !important;
+    font-size: 25px !important;
+}
+.arrow-icon-container {
+    width: 25px;
+    height: 25px;
+    margin-left: 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FCB196 !important;
+    color: #F16532 !important;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+.arrow-icon-container i {
+    font-size: 10px;
+}
+.star-icon-container {
+    width: 35px;
+    height: 35px;
+    background: #FCB196 !important;
+    color: #F16532 !important;
+    border-radius: 10px;
+}
+.fa-solid.fa-star {
+    color: #F16532 !important;
+}
+.menu-icon-design {
+    color: #F16532 !important;
+}
+.menu-icon-design:hover, .menu-icon-design.show {
+    color: #fff !important;
+}
+.table-cell-icon-container {
+    background: #FCB196 !important;
+    color: #F16532 !important;
+    width: 40px !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile__menu--container li {
+    font-family: 'Qanelas';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: #7D7D7E;
+    margin: 20px;
+}
+.profile__menu--container li h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 7px 0;
+}
+.profile__menu--container li p {
+    font-size: 12px;
+    color: rgb(219 162 162);
+    margin-top: -14px;
+    padding: 0;
+    line-height: 40px;
+    font-weight: 100;
+    border-bottom: 1px solid rgb(253 238 238);
+}
+.profile__menu--container li a {
+    font-family: 'Qanelas';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--red-color);
+    margin-left: 16px;
+    text-decoration: none;
 }
