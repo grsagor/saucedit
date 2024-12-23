@@ -1,0 +1,205 @@
+.calendar-page-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.left-calendar-container {
+    width: 332px;
+    padding: 0 16px;
+}
+#calendar table {
+    width: 100%; /* Ensures table stretches across container */
+    table-layout: fixed; /* Distributes widths equally */
+  }
+.right-calendar-container {
+    flex: 1;
+}
+
+/* Left side calendar */
+#month-year-btn, #year {
+    font-size: 24px;
+    font-weight: 700;
+    color: #212121;
+}
+#year {
+    color: #F17039;
+}
+#calendar td {
+    border: none;
+    border-bottom: none;
+    height: 42.84px;
+    cursor: pointer;
+}
+#calendar .table>:not(:last-child)>:last-child>* {
+    border: none;
+}
+#calendar th {
+    font-size: 10px;
+    font-weight: 600;
+    color: #71717A;
+}
+#calendar td {
+    font-size: 11px;
+    font-weight: 600;
+    color: #212121;
+}
+/* utils */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.dot {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.event-dot {
+    background-color: #69F0AE;
+}
+
+.task-dot {
+    background-color: #FFAB91;
+}
+
+.other-dot {
+    background-color: #FFE57F;
+}
+.checkbox-container {
+    padding: .375rem .75rem;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.checkbox-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #F17039;
+}
+.checkbox-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    color: white;
+    border-radius: 4px;
+}
+.checkbox-item-text {
+    color: #212121;
+    font-size: 12px;
+    font-weight: 500;
+}
+.selected {
+    color: #212121 !important;
+    background-color: #F17039 !important;
+    border-radius: 50%;
+}
+.selected .event-dot,
+.selected .task-dot,
+.selected .other-dot {
+    background-color: #212121;
+}
+/* New Calendar with Monthly and Weekly Views */
+#monthly-view tr {
+    border-top: none;
+}
+#monthly-view th {
+    color: #71717A;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 4px 16px 4px;
+}
+#monthly-view td {
+    color: #71717A;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px 4px 80px 4px;
+}
+#monthly-view th:nth-child(1),
+#monthly-view td:nth-child(1) {
+    border-left: none;
+}
+#weekly-view th,
+#weekly-view td {
+    box-shadow: -1px -1px 0 0 inset #E0E0E0;
+    border: none;
+}
+#weekly-view tr {
+    border: none;
+}
+#weekly-view th div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+}
+#weekly-view th div span:nth-child(1) {
+    font-size: 10px;
+    font-weight: 700;
+    color: #71717A;
+}
+#weekly-view th div span:nth-child(2) {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+}
+#weekly-view tbody td:nth-child(2),
+#weekly-view thead th:nth-child(8),
+#weekly-view tbody td:nth-child(8) {
+    background: #FAFAFA;
+}
+#weekly-view thead th:nth-child(6),
+#weekly-view tbody td:nth-child(6) {
+    background: #EFF6FF;
+}
+.time-cell {
+    color: #71717A;
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: top;
+    padding: 0 !important;
+    padding-bottom: 60px !important;
+    box-shadow: none !important;
+}
+#toggle-monthly {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 16px;
+}
+.active-toggle-btn {
+    color: #fff;
+    background-color: #F17039;
+}
+.active-toggle-btn:hover {
+    color: #fff;
+    background-color: #f3804f;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.btn:focus-visible {
+    outline: none;
+}
+.search-input-container {
+    width: unset;
+    background-color: #F4F4F5;
+}
+.search-input-container span {
+    background: none;
+    border: none;
+    padding-left: 8px;
+}
+.search-input-container input {
+    background: none;
+    border: none;
+    padding-left: 0;
+}

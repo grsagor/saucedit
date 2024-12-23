@@ -1,0 +1,23 @@
+.container-layout {
+    background: #fff !important;
+}
+.dashboard-section-title {
+    color: #9E9E9E;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+.dashboard-table {
+    width: 100%;
+}
+.dashboard-table tr {
+    border: 8px solid transparent;
+}
+.dashboard-table tr td:nth-child(1) {
+    width: 100px;
+    color: #9E9E9E;
+    font-size: 12px;
+}
+.dashboard-table tr td:nth-child(3) {
+    width: 20px;
+}
