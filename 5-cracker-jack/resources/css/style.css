@@ -243,14 +243,13 @@ header {
 
 .content-container {
     padding-top: 90px;
-    background-color: #ffffff;
     height: 100%;
     width: calc(100% - 260px);
     margin-left: 260px;
 }
 
 .container-layout {
-    background: #EDE7F6;
+    background: #F5F5F5;
     border-radius: 12px 12px 0 0;
     margin-right: 22px;
     padding: 22px 22px 80px;
@@ -515,7 +514,7 @@ header {
 }
 
 .card__details--bottom h2 span img {
-    margin-left: 113px;
+    margin-left: 6px;
     margin-top: -5px;
 }
 
@@ -1595,11 +1594,15 @@ dialog {
     margin-bottom: 10px;
 }
 
-.filter-heading-btn {
+.filter-heading-btn,
+.filter-heading-btn:focus,
+.filter-heading-btn:focus-visible {
     font-size: 14px;
     text-decoration: underline;
     background: none;
     border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .dialog-buttons {
@@ -1610,22 +1613,36 @@ dialog {
 
 .dialog-cancel-btn,
 .dialog-submit-btn {
-    padding: 0.5rem 1.5rem;
+    padding: 16px;
     font-size: 1rem;
+    font-weight: 500;
     border-radius: 5px;
     border: none;
     cursor: pointer;
 }
 
-.dialog-cancel-btn {
-    background-color: #f0f0f0;
-    color: #333;
+.dialog-cancel-btn,
+.dialog-cancel-btn:focus,
+.dialog-cancel-btn:focus-visible {
+    background-color: #fff;
+    color: #F17039;
     margin-right: 5px;
+    border: 1.5px solid #F17039;
+    box-shadow: none;
+    outline: none;
 }
 
+.dialog-cancel-btn:hover {
+    background-color: #ffede6;
+}
 .dialog-submit-btn {
     background-color: #F16532;
     color: white;
+    border: 1.5px solid #F17039;
+}
+.dialog-submit-btn:hover {
+    background-color: #ff4c00;    
+    border-color: #ff4c00;    
 }
 
 .filter-heading {
